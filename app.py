@@ -1,5 +1,13 @@
 from flask import Flask, request
 import requests
+from dotenv import load_dotenv
+import os
+
+# Load environment variables from .env
+load_dotenv()
+
+VERIFY_TOKEN = os.getenv("VERIFY_TOKEN")
+ACCESS_TOKEN = os.getenv("ACCESS_TOKEN")
 
 app = Flask(__name__)
 
